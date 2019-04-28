@@ -1,0 +1,2 @@
+- [binance-official-api-docs](https://github.com/binance-exchange/binance-official-api-docs)
+- [binance-api-node](https://github.com/binance-exchange/binance-api-node)
