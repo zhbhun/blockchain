@@ -1,5 +1,7 @@
 # 区块链
 
+- [awesome-blockchain-cn](https://github.com/chaozh/awesome-blockchain-cn)
+
 ## 是什么？
 
 - [知乎问答系列](https://www.zhihu.com/topic/19901773/index)
