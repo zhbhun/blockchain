@@ -36,9 +36,14 @@ const fork = require('child_process').fork;
 const _ = require('lodash');
 
 module.exports = (config, callback) => {
-  var debug = typeof v8debug === 'object';
+  // var debug = typeof v8debug === 'object';
+  // if (debug) {
+  //   process.execArgv = [];
+  // }
+  var util = require('../../util');
+  var debug = util.debug();
   if (debug) {
-    process.execArgv = [];
+    process.execArgv = ['--inspect', '--inspect-port=9228', '--inspect-brk'];
   }
 
   const child = fork(__dirname + '/child');

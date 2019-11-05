@@ -17,6 +17,9 @@ var _args = false;
 
 // helper functions
 var util = {
+  debug: function() {
+    return typeof v8debug === 'object' || /--debug|--inspect/.test(process.execArgv.join(' '));
+  },
   getConfig: function() {
     // cache
     if(_config)

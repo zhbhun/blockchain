@@ -2,9 +2,11 @@ var ForkTask = require('relieve').tasks.ForkTask;
 var fork = require('child_process').fork;
 
 module.exports = function(config, done) {
-  var debug = typeof v8debug === 'object';
+  // var debug = typeof v8debug === 'object';
+  var util = require('../../util');
+  var debug = util.debug();
   if (debug) {
-    process.execArgv = [];
+    process.execArgv = ['--inspect', '--inspect-port=9228', '--inspect-brk'];
   }
 
   task = new ForkTask(fork(__dirname + '/child'));

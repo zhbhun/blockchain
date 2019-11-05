@@ -1,9 +1,14 @@
 var fork = require('child_process').fork;
 
 module.exports = (mode, config, callback) => {
-  var debug = typeof v8debug === 'object';
+  // var debug = typeof v8debug === 'object';
+  // if (debug) {
+  //   process.execArgv = [];
+  // }
+  var util = require('../../util');
+  var debug = util.debug();
   if (debug) {
-    process.execArgv = [];
+    process.execArgv = ['--inspect', '--inspect-port=9228', '--inspect-brk'];
   }
 
   var child = fork(__dirname + '/child');

@@ -10,6 +10,24 @@ const base = require('./baseConfig');
 
 // starts an import
 // requires a post body with a config object
+/*
+{
+  "watch": {
+    "exchange": "binance",
+    "currency": "USDT",
+    "asset": "ETC"
+  },
+  "importer": {
+    "daterange": {
+      "from": "2019-05-03 00:00",
+      "to": "2019-05-04 00:00"
+    }
+  },
+  "candleWriter": {
+    "enabled": true
+  }
+}
+*/
 module.exports = function *() {
   let mode = 'importer';
 
